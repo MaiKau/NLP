@@ -4,9 +4,9 @@ app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False #json格式亂碼，改成ascii碼
 
 @app.route("/", methods=['POST'])
-def test(A):
+def test():
 	get_JsonInput = request.data.decode()
-	b=get_JsonInput + "1111" +A
+	b=get_JsonInput + "1111"
 	return b
 
 
